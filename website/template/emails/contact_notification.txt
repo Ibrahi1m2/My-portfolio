@@ -1,0 +1,17 @@
+NEW PORTFOLIO CONTACT MESSAGE
+========================================
+
+Sender Details:
+- Name: {{ name }}
+- Email: {{ email }}
+- Phone: {{ phone|default:"Not provided" }}
+- Subject: {{ subject|default:"General Inquiry" }}
+- Received At: {{ timestamp }}
+
+Message:
+----------------------------------------
+{{ message }}
+----------------------------------------
+
+Sent from Ibrahim M's Portfolio Website to iburahim004@gmail.com.
+You can reply directly to this email to contact {{ name }} at {{ email }}.
