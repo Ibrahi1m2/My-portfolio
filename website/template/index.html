@@ -695,13 +695,69 @@
                 padding-right: 5px !important;
                 margin-bottom: 0 !important;
             }
-            #portfolio .latest-portfolio-card-compact {
+            /* -------------------------------------------------------------
+               DISABLE MOBILE HOVER & ACTIVE BLUE BACKGROUND / GLOW ON CARDS
+               ------------------------------------------------------------- */
+            #portfolio .latest-portfolio-card-compact,
+            #portfolio .latest-portfolio-card-compact:hover,
+            #portfolio .latest-portfolio-card-compact:active,
+            #portfolio .latest-portfolio-card-compact:focus,
+            #portfolio .latest-portfolio-card-compact.active,
+            #portfolio .latest-portfolio-card-compact.tmponhover:hover,
+            #portfolio .latest-portfolio-card-compact.tmponhover:active,
+            #portfolio .latest-portfolio-card-compact.tmponhover.active {
+                background: var(--color-gray-2) !important;
+                background-color: var(--color-gray-2) !important;
+                border: 1px solid rgba(255, 255, 255, 0.08) !important;
+                box-shadow: none !important;
+                transform: none !important;
                 padding: 10px 8px !important;
                 border-radius: 12px !important;
                 height: 100% !important;
                 display: flex !important;
                 flex-direction: column !important;
                 justify-content: space-between !important;
+            }
+            #portfolio .latest-portfolio-card-compact::before,
+            #portfolio .latest-portfolio-card-compact:hover::before,
+            #portfolio .latest-portfolio-card-compact:active::before,
+            #portfolio .latest-portfolio-card-compact.active::before,
+            #portfolio .latest-portfolio-card-compact::after,
+            #portfolio .latest-portfolio-card-compact:hover::after,
+            #portfolio .latest-portfolio-card-compact:active::after,
+            #portfolio .latest-portfolio-card-compact.active::after {
+                display: none !important;
+                opacity: 0 !important;
+                background: none !important;
+            }
+            #portfolio .latest-portfolio-card-compact .tmp-light,
+            #portfolio .latest-portfolio-card-compact:hover .tmp-light,
+            #portfolio .latest-portfolio-card-compact:active .tmp-light,
+            #portfolio .latest-portfolio-card-compact.active .tmp-light,
+            #portfolio .tmp-light {
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                background: none !important;
+            }
+            /* Preserve Card 6 dashed border and subtle bg on mobile */
+            #portfolio div:last-child .latest-portfolio-card-compact,
+            #portfolio div:last-child .latest-portfolio-card-compact:hover,
+            #portfolio div:last-child .latest-portfolio-card-compact:active,
+            #portfolio div:last-child .latest-portfolio-card-compact.active {
+                background: rgba(0, 225, 255, 0.02) !important;
+                border: 1px dashed rgba(0, 225, 255, 0.35) !important;
+                box-shadow: none !important;
+                transform: none !important;
+            }
+            #portfolio .latest-portfolio-card-compact:hover .project-logo-box,
+            #portfolio .latest-portfolio-card-compact:active .project-logo-box,
+            #portfolio .latest-portfolio-card-compact.active .project-logo-box {
+                background: rgba(255, 255, 255, 0.025) !important;
+                border-color: rgba(255, 255, 255, 0.06) !important;
+            }
+            #portfolio .latest-portfolio-card-compact:hover .project-logo-box img {
+                transform: none !important;
             }
             #portfolio .project-logo-box {
                 height: 58px !important;
@@ -1383,9 +1439,9 @@
                8. CONTACT SECTION: #contacts (GET IN TOUCH)
                --------------------------------------------- */
             #contacts.get-in-touch-area {
-                padding-top:0px !important;
-                padding-bottom: 30px !important;
-                margin-top: -40px;
+                padding-top: 0px !important;
+                padding-bottom: 35px !important;
+                margin-top: 5px !important;
             }
             .get-in-touch-wrapper {
                 padding: 22px 16px 24px 16px !important;
@@ -2279,7 +2335,6 @@
                         <div class="banner-right-content">
                             <div class="main-img">
                                 <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/experiences/my-img.png' %}" alt="banner-img">
-                                <h2 class="banner-big-text-1 up-down-2">Frontend Developer</h2>
                                 <h2 class="banner-big-text-2 up-down">Frontend Developer</h2>
                                 <div class="benner-two-bg-red-img">
                                     <img src="{% static 'assets/images/banner/banner-user-image-two-red-bg.png' %}" alt="red-img">
@@ -2567,56 +2622,86 @@
     </div>
     <!-- tmp skill area end -->
 
-
-
-   
-      <!-- Tpm Latest Service Area Start -->
-    <section class="latest-service-area tmp-section-gapTop">
+  <!-- Tpm Education Experience Area Start -->
+    <section class="education-experience tmp-section-gapTop" id="resume">
         <div class="container">
             <div class="section-head mb--50">
                 <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <span class="subtitle theme-gradient">Core Services</span>
+                    <span class="subtitle theme-gradient">Education & Experience</span>
                 </div>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Transforming Ideas Into
-                    <br> High-Impact Solutions
+                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">My Academic Background <br> & Professional Journey
                 </h2>
-                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3"> Delivering responsive, scalable, and visually refined web solutions built with modern technologies and clean coding practices. </p>
+                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">Graduated with a Bachelor's in Engineering and gained 1.5 years of industry experience developing web applications, responsive user interfaces, and graphic assets.</p>
+            </div>
+            <div class="row g-5 animation-action-3">
+                <div class="col-lg-6 paralax-image col-sm-6">
+                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <h4 class="edu-sub-title">Francis Xavier Engineering College</h4>
+                        <h2 class="edu-title">2020 - 2024</h2>
+                        <div class="tmp-light light-top-left"></div>
+                        <p class="edu-para">B.E. in Electronics and Communication Engineering. Graduated with 8.1 CGPA in Tirunelveli, India.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 paralax-image col-sm-6">
+                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
+                        <h4 class="edu-sub-title">Al-Hudha Matric Higher Sec. School</h4>
+                        <h2 class="edu-title">2018 - 2020</h2>
+                        <div class="tmp-light light-top-left"></div>
+                        <p class="edu-para">Higher Secondary Certificate (HSC) in Tirunelveli, India with a score of 55%.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 paralax-image col-sm-6">
+                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        <h4 class="edu-sub-title">Kings Matric Higher Sec. School</h4>
+                        <h2 class="edu-title">2018</h2>
+                        <div class="tmp-light light-top-left"></div>
+                        <p class="edu-para">Secondary School Leaving Certificate (SSLC) in Valliyur, India with a score of 80%.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 paralax-image col-sm-6">
+                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <h4 class="edu-sub-title">Nxtwave Academy & Swayam IIT</h4>
+                        <h2 class="edu-title">Certifications</h2>
+                        <div class="tmp-light light-top-left"></div>
+                        <p class="edu-para">Completed Responsive Web Designing at Nxtwave Academy and Data Science with Python by IIT Kharagpur.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="row animation-action-2">
-                <div class="col-lg-6 order-2 order-lg-1">
-                    <div class="paralax-image">
-                        <div class="service-card-v2 active single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
-                            <h2 class="service-card-num"><span>01.</span>Responsive Frontend Engineering</h2>
-                            <p class="service-para">Crafting intuitive, fast, and accessible user interfaces that work seamlessly across all screen sizes and mobile devices.</p>
-                            <div class="tmp-light light-center"></div>
+            <div class="experiences-wrapper">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="experiences-wrap-left-content">
+                            <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">Experiences</h2>
+
+                            <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <p class="ex-subtitle theme-gradient">05/06/2024 - 14/06/2025</p>
+                                <h2 class="ex-name">SYNTRONICS SYSTEM (6 Months)</h2>
+                                <h3 class="ex-title">Associate Software Engineer</h3>
+                                <p class="ex-para">Completed 6 months of internship in Software Development, contributing to application design, frontend coding, testing, and system development.</p>
+                            </div>
+                            <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                <p class="ex-subtitle theme-gradient">Frontend & Design</p>
+                                <h2 class="ex-name">Thaagam Foundation (1.5 Months)</h2>
+                                <h3 class="ex-title">Frontend Developer & Designer</h3>
+                                <p class="ex-para">Developed responsive web interfaces, enhanced user experience, and crafted visual assets using Adobe Photoshop and modern web standards.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="paralax-image">
-                        <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
-                            <h2 class="service-card-num"><span>02.</span>Robust Code & Architecture</h2>
-                            <p class="service-para">Writing clean, maintainable, and modular JavaScript and React code that ensures reliability and easy troubleshooting.</p>
-                            <div class="tmp-light light-center"></div>
+                    <div class="col-lg-6 paralax-image">
+                        <div class="experiences-wrap-right-content">
+                            <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/experiences/my-img1.png' %}" alt="expert-img">
                         </div>
-                    </div>
-                    <div class="paralax-image">
-                        <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
-                            <h2 class="service-card-num"><span>03.</span>Creative Visuals & Photoshop</h2>
-                            <p class="service-para">Blending technical frontend development with Adobe Photoshop design skills to produce aesthetically pleasing web experiences.</p>
-                            <div class="tmp-light light-center"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 paralax-image order-1 order-lg-2">
-                    <div class="service-card-user-image tmponhover single-animation active">
-                        <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/services/img1.png' %}" alt="Frontend Engineering & Development">
-                        <div class="tmp-light light-top-left"></div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
-    <!-- Tpm Latest Service Area End -->
+    <!-- Tpm Education Experience Area End -->
+
+   
+  
 
     <!-- Tpm Featured Projects Section Start -->
     <section class="latest-portfolio-area custom-column-grid tmp-section-gapTop" id="portfolio">
@@ -2632,7 +2717,7 @@
             <div class="row animation-action-3 g-4">
                 <!-- Project 1: Wake Up Trust -->
                 <div class="col-lg-4 col-md-6 col-12 paralax-image">
-                    <div class="latest-portfolio-card-compact tmponhover single-animation active tmp-scroll-trigger tmp-fade-in animation-order-1">
+                    <div class="latest-portfolio-card-compact tmponhover single-animation tmp-scroll-trigger tmp-fade-in animation-order-1">
                         <div>
                             <div class="project-logo-box">
                                 <a href="https://wakeuptrust.org/" target="_blank" rel="noopener noreferrer">
@@ -2989,83 +3074,53 @@
     </section>
     <!-- Tpm Blog and news Area End -->
 
-    <!-- Tpm Education Experience Area Start -->
-    <section class="education-experience tmp-section-gapTop" id="resume">
+      <!-- Tpm Latest Service Area Start -->
+    <section class="latest-service-area tmp-section-gapTop">
         <div class="container">
             <div class="section-head mb--50">
                 <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
-                    <span class="subtitle theme-gradient">Education & Experience</span>
+                    <span class="subtitle theme-gradient">Core Services</span>
                 </div>
-                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">My Academic Background <br> & Professional Journey
+                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">Transforming Ideas Into
+                    <br> High-Impact Solutions
                 </h2>
-                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">Graduated with a Bachelor's in Engineering and gained 1.5 years of industry experience developing web applications, responsive user interfaces, and graphic assets.</p>
-            </div>
-            <div class="row g-5 animation-action-3">
-                <div class="col-lg-6 paralax-image col-sm-6">
-                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
-                        <h4 class="edu-sub-title">Francis Xavier Engineering College</h4>
-                        <h2 class="edu-title">2020 - 2024</h2>
-                        <div class="tmp-light light-top-left"></div>
-                        <p class="edu-para">B.E. in Electronics and Communication Engineering. Graduated with 8.1 CGPA in Tirunelveli, India.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 paralax-image col-sm-6">
-                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
-                        <h4 class="edu-sub-title">Al-Hudha Matric Higher Sec. School</h4>
-                        <h2 class="edu-title">2018 - 2020</h2>
-                        <div class="tmp-light light-top-left"></div>
-                        <p class="edu-para">Higher Secondary Certificate (HSC) in Tirunelveli, India with a score of 55%.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 paralax-image col-sm-6">
-                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
-                        <h4 class="edu-sub-title">Kings Matric Higher Sec. School</h4>
-                        <h2 class="edu-title">2018</h2>
-                        <div class="tmp-light light-top-left"></div>
-                        <p class="edu-para">Secondary School Leaving Certificate (SSLC) in Valliyur, India with a score of 80%.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 paralax-image col-sm-6">
-                    <div class="education-experience-card single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
-                        <h4 class="edu-sub-title">Nxtwave Academy & Swayam IIT</h4>
-                        <h2 class="edu-title">Certifications</h2>
-                        <div class="tmp-light light-top-left"></div>
-                        <p class="edu-para">Completed Responsive Web Designing at Nxtwave Academy and Data Science with Python by IIT Kharagpur.</p>
-                    </div>
-                </div>
+                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3"> Delivering responsive, scalable, and visually refined web solutions built with modern technologies and clean coding practices. </p>
             </div>
 
-            <div class="experiences-wrapper">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="experiences-wrap-left-content">
-                            <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">Experiences</h2>
-
-                            <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
-                                <p class="ex-subtitle theme-gradient">05/06/2024 - 14/06/2025</p>
-                                <h2 class="ex-name">SYNTRONICS SYSTEM (6 Months)</h2>
-                                <h3 class="ex-title">Associate Software Engineer</h3>
-                                <p class="ex-para">Completed 6 months of internship in Software Development, contributing to application design, frontend coding, testing, and system development.</p>
-                            </div>
-                            <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-2">
-                                <p class="ex-subtitle theme-gradient">Frontend & Design</p>
-                                <h2 class="ex-name">Thaagam Foundation (1.5 Months)</h2>
-                                <h3 class="ex-title">Frontend Developer & Designer</h3>
-                                <p class="ex-para">Developed responsive web interfaces, enhanced user experience, and crafted visual assets using Adobe Photoshop and modern web standards.</p>
-                            </div>
+            <div class="row animation-action-2">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="paralax-image">
+                        <div class="service-card-v2 active single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                            <h2 class="service-card-num"><span>01.</span>Responsive Frontend Engineering</h2>
+                            <p class="service-para">Crafting intuitive, fast, and accessible user interfaces that work seamlessly across all screen sizes and mobile devices.</p>
+                            <div class="tmp-light light-center"></div>
                         </div>
                     </div>
-                    <div class="col-lg-6 paralax-image">
-                        <div class="experiences-wrap-right-content">
-                            <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/experiences/my-img1.png' %}" alt="expert-img">
+                    <div class="paralax-image">
+                        <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
+                            <h2 class="service-card-num"><span>02.</span>Robust Code & Architecture</h2>
+                            <p class="service-para">Writing clean, maintainable, and modular JavaScript and React code that ensures reliability and easy troubleshooting.</p>
+                            <div class="tmp-light light-center"></div>
+                        </div>
+                    </div>
+                    <div class="paralax-image">
+                        <div class="service-card-v2 single-animation tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
+                            <h2 class="service-card-num"><span>03.</span>Creative Visuals & Photoshop</h2>
+                            <p class="service-para">Blending technical frontend development with Adobe Photoshop design skills to produce aesthetically pleasing web experiences.</p>
+                            <div class="tmp-light light-center"></div>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 paralax-image order-1 order-lg-2">
+                    <div class="service-card-user-image tmponhover single-animation active">
+                        <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{% static 'assets/images/services/img1.png' %}" alt="Frontend Engineering & Development">
+                        <div class="tmp-light light-top-left"></div>
+                    </div>
+                </div>
             </div>
-
         </div>
     </section>
-    <!-- Tpm Education Experience Area End -->
+    <!-- Tpm Latest Service Area End -->
  <!-- Tpm Get In touch start -->
     <section class="get-in-touch-area tmp-section-gapTop" id="contacts">
         <div class="container">
@@ -4568,6 +4623,104 @@
                     }
                 }, 350);
             });
+
+            // Smooth Skills Progress Bar Animation & Counter
+            function initSkillsProgressAnimation() {
+                var $skillSection = $('#service');
+                if (!$skillSection.length) return;
+
+                var animated = false;
+
+                function animateBars() {
+                    if (animated) return;
+                    animated = true;
+
+                    $skillSection.find('.progress-charts').each(function (idx) {
+                        var $chart = $(this);
+                        var $bar = $chart.find('.progress-bar');
+                        var $label = $chart.find('.percent-label');
+                        var targetVal = parseInt($bar.attr('aria-valuenow'), 10) || 0;
+
+                        // Stagger each bar by 80ms
+                        var delay = idx * 80;
+
+                        setTimeout(function () {
+                            // Smooth CSS width transition
+                            $bar.css('width', targetVal + '%');
+
+                            // Synchronized number count up
+                            var duration = 1400; // ms
+                            var startTime = null;
+
+                            function stepCount(time) {
+                                if (!startTime) startTime = time;
+                                var elapsed = time - startTime;
+                                var progress = Math.min(elapsed / duration, 1);
+                                var ease = 1 - Math.pow(1 - progress, 4);
+                                var current = Math.round(ease * targetVal);
+
+                                $label.text(current + '%');
+
+                                if (progress < 1) {
+                                    requestAnimationFrame(stepCount);
+                                } else {
+                                    $label.text(targetVal + '%');
+                                }
+                            }
+
+                            requestAnimationFrame(stepCount);
+                        }, delay);
+                    });
+                }
+
+                // IntersectionObserver for buttery-smooth scroll trigger
+                if ('IntersectionObserver' in window) {
+                    var observer = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                animateBars();
+                                observer.disconnect();
+                            }
+                        });
+                    }, {
+                        threshold: 0.12,
+                        rootMargin: '0px 0px -30px 0px'
+                    });
+
+                    observer.observe($skillSection[0]);
+                } else {
+                    // Fallback scroll listener
+                    $(window).on('scroll.skillsScroll', function () {
+                        var scrollPos = $(window).scrollTop() + $(window).height();
+                        var targetPos = $skillSection.offset().top + 50;
+                        if (scrollPos > targetPos) {
+                            animateBars();
+                            $(window).off('scroll.skillsScroll');
+                        }
+                    });
+                    $(window).trigger('scroll.skillsScroll');
+                }
+
+                // Fallback guarantee: if not triggered within 4 seconds, show bars
+                setTimeout(function () {
+                    if (!animated) {
+                        animateBars();
+                    }
+                }, 4000);
+            }
+
+            initSkillsProgressAnimation();
+
+            // Mobile: Ensure portfolio cards don't stay stuck active on touch
+            if (window.innerWidth <= 767) {
+                $('#portfolio .latest-portfolio-card-compact').removeClass('active');
+                $('#portfolio .latest-portfolio-card-compact').on('touchend touchcancel', function () {
+                    var $el = $(this);
+                    setTimeout(function () {
+                        $el.removeClass('active');
+                    }, 100);
+                });
+            }
         });
     })(jQuery);
     </script>
