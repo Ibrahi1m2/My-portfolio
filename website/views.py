@@ -19,7 +19,7 @@ def index(request):
     context = {
         'page_title': 'Home | My Portfolio',
     }
-    return render(request, 'index.html', context)
+    return render(request, 'index.html',context)
 
 
 # -----------------------------------------------
@@ -75,7 +75,7 @@ def index_03(request):
     context = {
         'page_title': 'Home | My Portfolio',
     }
-    return render(request, 'index-03.html', context)
+    return render(request, 'index.html', context)
 def index_04(request):
     """Portfolio home page view"""
     context = {
